@@ -1,0 +1,427 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>process6</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header collapse="condense">
+      <h2 >
+        PROCESS 6: PROCESS OF HANDLING OF COMPLAINTS AND NON-COMPLIANCES
+      </h2>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header collapse="condense">
+      <h2 >
+        Parameter 6.1: Institute Rules and Regulations
+      </h2>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card-subtitle>Activites</ion-card-subtitle>
+  <ion-button expand="block" (click)="setOpen(true)" class="butt1"><span>QAP 6.1.1:  Procedure for creating awareness on Institute Rules and Regulations</span></ion-button>
+  <ion-button (click)="setOpen1(true)" expand="block" class="butt1"><span>QAP 6.1.2: Procedure for Control of Non-Compliances</span></ion-button>
+ 
+  <br>
+
+
+
+  <ion-modal [isOpen]="isModalOpen">
+    <form method="post" [formGroup]="form" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button  (click)="createpeople()">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 6.1.1:  Procedure for creating awareness on Institute Rules and Regulations
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Orientation and induction of staff and trainees at the start of the new academic session on general rules and regulations, and Trainers code of conduct.</ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input type="text"  formControlName="q1reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Orientation on course information for new trainees </ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input type="text"  formControlName="q2reason" placeholder="click here to type your reasons">
+                   
+                      </ion-input>
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br>   
+
+
+
+          <ion-list>
+            <ion-radio-group formControlName="q3">
+              <ion-item>
+
+                <ion-card-subtitle>Q.Display of general rules and regulations on notice boards /website</ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No"></ion-radio>
+                  <ion-input type="text"  formControlName="q3reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+              </ion-item>
+
+             </ion-radio-group>
+            </ion-list>
+        <br> 
+        
+        
+       
+ 
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+
+  <ion-modal [isOpen]="isModalOpen1">
+    <form method="post" [formGroup]="form1" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen1(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople1()">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 6.1.2: Procedure for Control of Non-Compliances
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Management Review committee in consultation with CEO/Director to analyze the non-compliance and decide on the action plan to be prepared.</ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input type="text"  formControlName="q1reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Head of departments should identify preventive actions to eliminate potential non-conformities. Record of non-conformities will be periodically monitored and reviewed.</ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input type="text"  formControlName="q2reason" placeholder="click here to type your reasons">
+                   
+                      </ion-input>
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br>   
+            <br>
+
+
+
+          <ion-list>
+            <ion-radio-group formControlName="q3">
+
+              <ion-card-subtitle>> Attendance:</ion-card-subtitle>
+              <br>
+              <ion-item>
+
+                <ion-card-subtitle>Q.Trainees shall obtain 90% attendance in all subjects to attend for final assessment.</ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No"></ion-radio>
+                  <ion-input type="text"  formControlName="q3reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+              </ion-item>
+
+             </ion-radio-group>
+            </ion-list>
+        <br> 
+
+
+        <ion-list>
+          <ion-radio-group formControlName="q4">
+            <ion-item>
+
+              <ion-card-subtitle>Q.Issue notice to trainees who fails to obtain 90% attendance and he/she shall not be allowed to seat for assessment</ion-card-subtitle>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="Yes"></ion-radio>
+            </ion-item>
+     
+             <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio value="No"></ion-radio>
+                <ion-input type="text"  formControlName="q4reason" placeholder="click here to type your reasons">
+                   
+                </ion-input>
+            </ion-item>
+
+           </ion-radio-group>
+          </ion-list>
+      <br>   
+
+
+      <ion-list>
+        <ion-radio-group formControlName="q5">
+          <ion-item>
+
+            <ion-card-subtitle>Q.If the trainees fails to obtain 90% attendance shall be allowed to seat for assessment except where absence is authorized in exceptional circumstances or with the strong evidences of the failures. </ion-card-subtitle>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Yes</ion-label>
+            <ion-radio value="Yes"></ion-radio>
+          </ion-item>
+   
+           <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio value="No"></ion-radio>
+              <ion-input type="text"  formControlName="q5reason" placeholder="click here to type your reasons">
+                   
+              </ion-input>
+          </ion-item>
+
+         </ion-radio-group>
+        </ion-list>
+    <br>   
+
+    <ion-list>
+      <ion-radio-group formControlName="q6">
+        <ion-item>
+
+          <ion-card-subtitle>Q.Refer terms and condition of the attendances. </ion-card-subtitle>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio value="Yes"></ion-radio>
+        </ion-item>
+ 
+         <ion-item>
+            <ion-label>No</ion-label>
+            <ion-radio value="No"></ion-radio>
+            <ion-input type="text"  formControlName="q6reason" placeholder="click here to type your reasons">
+                   
+            </ion-input>
+        </ion-item>
+
+       </ion-radio-group>
+      </ion-list>
+  <br>   
+
+
+  <ion-list>
+    <ion-radio-group formControlName="q7">
+      <ion-item>
+
+        <ion-card-subtitle>Q.Records maintained by the Adm. Officer</ion-card-subtitle>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio value="Yes"></ion-radio>
+      </ion-item>
+
+       <ion-item>
+          <ion-label>No</ion-label>
+          <ion-radio value="No"></ion-radio>
+          <ion-input type="text"  formControlName="q7reason" placeholder="click here to type your reasons">
+                   
+          </ion-input>
+      </ion-item>
+
+     </ion-radio-group>
+    </ion-list>
+<br>   
+
+
+
+<ion-list>
+  <ion-radio-group formControlName="q8">
+
+    <ion-card-subtitle>> Practical/written assessment:</ion-card-subtitle>
+    <br>
+    <ion-item>
+
+      <ion-card-subtitle>Q.Trainees with minimum pass mark of 40% in theory and other written assessment is considered competent.</ion-card-subtitle>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Yes</ion-label>
+      <ion-radio value="Yes"></ion-radio>
+    </ion-item>
+
+     <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio value="No"></ion-radio>
+        <ion-input type="text"  formControlName="q8reason" placeholder="click here to type your reasons">
+                   
+        </ion-input>
+    </ion-item>
+
+   </ion-radio-group>
+  </ion-list>
+<br> 
+<br>
+
+<ion-list>
+  <ion-radio-group formControlName="q9">
+
+    <ion-item>
+
+      <ion-card-subtitle>Q.Trainees with minimum pass mark of 60% in practical assessment is considered competent. .</ion-card-subtitle>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Yes</ion-label>
+      <ion-radio value="Yes"></ion-radio>
+    </ion-item>
+
+     <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio value="No"></ion-radio>
+        <ion-input type="text"  formControlName="q9reason" placeholder="click here to type your reasons">
+                   
+        </ion-input>
+    </ion-item>
+
+   </ion-radio-group>
+  </ion-list>
+<br> 
+        
+        
+       
+ 
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+
+</ion-content>

@@ -1,0 +1,976 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>process10</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header collapse="condense">
+      <h2 >
+        PROCESS 10: PROCESS OF DOCUMENT CONTROL AND RECORD
+      </h2>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header collapse="condense">
+      <h2 >
+        Parameter 10.1: Process of Recording
+      </h2>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card-subtitle>Activites</ion-card-subtitle>
+  <ion-button expand="block" (click)="setOpen(true)"  class="butt1"><span>QAP 10.1.1: Procedure for maintaining Inventory system</span></ion-button>
+  <ion-button (click)="setOpen1(true)" expand="block" class="butt1"><span>QAP 10.1.2: Procedure for maintaining Trainee Record</span></ion-button>
+  <ion-button (click)="setOpen2(true)" expand="block" class="butt1"><span>QAP 10.1.3: Procedure for maintaining Staff Record</span></ion-button>
+  <ion-button (click)="setOpen3(true)" expand="block" class="butt1"><span>QAP 10.1.4: Procedure for Maintaining Training Record</span></ion-button>
+    <ion-button (click)="setOpen4(true)" expand="block" class="butt1"><span>QAP 10.1.5: Procedure for Maintaining Administrative Record</span></ion-button>
+  <br>
+
+
+  <ion-card>
+    <ion-card-header collapse="condense">
+      <h2 >
+        Parameter 10.2: Process of Record Control
+      </h2>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card-subtitle>Activites</ion-card-subtitle>
+  <ion-button expand="block" (click)="setOpen5(true)" class="butt1"><span>QAP 10.2.1: Procedure for Storing and Archiving records</span></ion-button>
+  <ion-button (click)="setOpen6(true)" expand="block" class="butt1"><span>QAP 10.2.2: Procedure for Accessing records</span></ion-button>
+ 
+  <br>
+
+
+  
+  <ion-modal [isOpen]="isModalOpen">
+
+    <form method="post" [formGroup]="form" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+
+        <form method="post" [formGroup]="form" >
+        <ion-card>
+    
+         
+    
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.1: Procedure for maintaining Inventory system
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+    
+          <br>
+    
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Maintain inventory for fixed assets of the Institute as per Procurement Management Manual</ion-card-subtitle>
+                </ion-item>
+    
+               <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"  name="q1"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No" name="q1"  ></ion-radio>
+ 
+                  <ion-input type="text"  formControlName="q1reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+      
+                </ion-item>                                             
+               </ion-radio-group>
+              </ion-list>
+              <br>
+    
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+    
+                    <ion-card-subtitle>Q.Maintain inventory of facilities and amenities as per Procurement Management Manual </ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"  name="q2" ></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No" name="q2" id="click-trigger1" ></ion-radio>
+
+                                          
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input>                                        
+                      
+                  </ion-item>
+    
+              
+    
+                 </ion-radio-group>
+                </ion-list>
+
+        
+          </ion-card-content>
+        
+        </ion-card>
+      </form>
+      </ion-content>
+    
+    
+    </ng-template>
+  </form>
+  </ion-modal>
+
+
+
+    
+  <ion-modal [isOpen]="isModalOpen1">
+    <form method="post" [formGroup]="form1" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen1(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople1()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.2: Procedure for maintaining Trainee Record
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group  formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Registration and admission record updated and maintained</ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input>   
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group  formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Trainee’s database maintained and up-dated.</ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input>   
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br>   
+
+            <ion-list>
+              <ion-radio-group  formControlName="q3">
+                <ion-item>
+
+                  <ion-card-subtitle>Q.Maintain and update trainee personal file </ion-card-subtitle>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes"></ion-radio>
+                </ion-item>
+         
+                 <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio value="No"></ion-radio>
+                    <ion-input  type="text"   formControlName="q3reason" placeholder="click here to type your reasons">
+                        
+                    </ion-input>   
+                </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+          <br> 
+          
+          
+          <ion-list>
+            <ion-radio-group  formControlName="q4">
+              <ion-item>
+
+                <ion-card-subtitle>Q.Maintain graduates information with employment details</ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No"></ion-radio>
+                  <ion-input  type="text"   formControlName="q4reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input>   
+              </ion-item>
+
+             </ion-radio-group>
+            </ion-list>
+        <br>   
+
+
+        <ion-list>
+          <ion-radio-group  formControlName="q5">
+            <ion-item>
+
+              <ion-card-subtitle>Q.Records maintained by Adm. Officer.</ion-card-subtitle>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="Yes"></ion-radio>
+            </ion-item>
+     
+             <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio value="No"></ion-radio>
+                <ion-input  type="text"   formControlName="q5reason" placeholder="click here to type your reasons">
+                        
+                </ion-input>   
+            </ion-item>
+
+           </ion-radio-group>
+          </ion-list>
+      <br>   
+
+
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </form>
+  </ion-modal>
+
+
+    
+  <ion-modal [isOpen]="isModalOpen2">
+    <form method="post" [formGroup]="form2" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen2(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)=" createpeople2()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.3: Procedure for maintaining Staff Record
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Maintain and update personal file for each staff </ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input>  
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Maintain and up-date staff details </ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input>  
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br> 
+            
+            
+            <ion-list>
+              <ion-radio-group formControlName="q3">
+                <ion-item>
+
+                  <ion-card-subtitle>Q.Records maintained by Adm. Officer.</ion-card-subtitle>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes"></ion-radio>
+                </ion-item>
+         
+                 <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio value="No"></ion-radio>
+                    <ion-input  type="text"   formControlName="q3reason" placeholder="click here to type your reasons">
+                        
+                    </ion-input>  
+                </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+          <br>   
+
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+      
+  <ion-modal [isOpen]="isModalOpen3">
+    <form method="post" [formGroup]="form3" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen3(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople3()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.4: Procedure for Maintaining Training Record
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Maintain and update Annual training calendar if possible, </ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input>  
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Maintain and update training delivery plan/documents</ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input>  
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br> 
+            
+            
+            <ion-list>
+              <ion-radio-group formControlName="q3">
+                <ion-item>
+
+                  <ion-card-subtitle>Q.Maintain logbooks by concerned Trainer</ion-card-subtitle>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes"></ion-radio>
+                </ion-item>
+         
+                 <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio value="No"></ion-radio>
+                    <ion-input  type="text"   formControlName="q3reason" placeholder="click here to type your reasons">
+                        
+                    </ion-input>  
+                </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+          <br>   
+
+                      
+          <ion-list>
+            <ion-radio-group formControlName="q4">
+              <ion-item>
+
+                <ion-card-subtitle>Q.Maintain feedback report from the trainees</ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No"></ion-radio>
+                  <ion-input  type="text"   formControlName="q4reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input>  
+              </ion-item>
+
+             </ion-radio-group>
+            </ion-list>
+        <br>   
+
+
+        <ion-list>
+          <ion-radio-group formControlName="q5">
+            <ion-item>
+
+              <ion-card-subtitle>Q.Maintain Tracer Study Report</ion-card-subtitle>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="Yes"></ion-radio>
+            </ion-item>
+     
+             <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio value="No"></ion-radio>
+                <ion-input  type="text"   formControlName="q5reason" placeholder="click here to type your reasons">
+                        
+                </ion-input>  
+            </ion-item>
+
+           </ion-radio-group>
+          </ion-list>
+      <br>   
+
+
+      <ion-list>
+        <ion-radio-group formControlName="q6">
+          <ion-item>
+
+            <ion-card-subtitle>Q.Maintain Assessment Record </ion-card-subtitle>
+          </ion-item>
+          
+          <ion-item>
+            <ion-label>Yes</ion-label>
+            <ion-radio value="Yes"></ion-radio>
+          </ion-item>
+   
+           <ion-item>
+              <ion-label>No</ion-label>
+              <ion-radio value="No"></ion-radio>
+              <ion-input  type="text"   formControlName="q6reason" placeholder="click here to type your reasons">
+                        
+              </ion-input>  
+          </ion-item>
+
+         </ion-radio-group>
+        </ion-list>
+    <br>   
+
+    <ion-list>
+      <ion-radio-group formControlName="q7">
+        <ion-item>
+
+          <ion-card-subtitle>Q.Records maintained by Adm. Officer.</ion-card-subtitle>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Yes</ion-label>
+          <ion-radio value="Yes"></ion-radio>
+        </ion-item>
+ 
+         <ion-item>
+            <ion-label>No</ion-label>
+            <ion-radio value="No"></ion-radio>
+            <ion-input  type="text"   formControlName="q7reason" placeholder="click here to type your reasons">
+                        
+            </ion-input>  
+        </ion-item>
+
+       </ion-radio-group>
+      </ion-list>
+   <br>   
+
+
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+  <ion-modal [isOpen]="isModalOpen4">
+    <form method="post" [formGroup]="form4" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen4(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople4()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.5: Procedure for Maintaining Administrative Record
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Maintain all general correspondences (internal and external) </ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input> 
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Maintain minutes of the meetings, reports and publications </ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input> 
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br> 
+            
+            
+            <ion-list>
+              <ion-radio-group formControlName="q3">
+                <ion-item>
+
+                  <ion-card-subtitle>Q.Maintain financial records </ion-card-subtitle>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes"></ion-radio>
+                </ion-item>
+         
+                 <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio value="No"></ion-radio>
+                    <ion-input  type="text"   formControlName="q3reason" placeholder="click here to type your reasons">
+                        
+                    </ion-input> 
+                </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+          <br>   
+
+                      
+          <ion-list>
+            <ion-radio-group formControlName="q4">
+              <ion-item>
+
+                <ion-card-subtitle>Q.Maintain annual plan of the Institute </ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No"></ion-radio>
+                  <ion-input  type="text"   formControlName="q4reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input> 
+              </ion-item>
+
+             </ion-radio-group>
+            </ion-list>
+        <br>   
+
+
+        <ion-list>
+          <ion-radio-group formControlName="q5">
+            <ion-item>
+
+              <ion-card-subtitle>Q.Records maintained by Adm. Officer</ion-card-subtitle>
+            </ion-item>
+            
+            <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-radio value="Yes"></ion-radio>
+            </ion-item>
+     
+             <ion-item>
+                <ion-label>No</ion-label>
+                <ion-radio value="No"></ion-radio>
+                <ion-input  type="text"   formControlName="q5reason" placeholder="click here to type your reasons">
+                        
+                </ion-input> 
+            </ion-item>
+
+           </ion-radio-group>
+          </ion-list>
+      <br>   
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+  <ion-modal [isOpen]="isModalOpen5">
+    <form method="post" [formGroup]="form5" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen5(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople5()">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.2.1: Procedure for Storing and Archiving records
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Identify and designate storage and archiving facility </ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input> 
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+
+                    <ion-card-subtitle>Q.Store and archive records as per the Financial / procurement Manual</ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No"></ion-radio>
+                      <ion-input  type="text"   formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input> 
+                  </ion-item>
+
+                 </ion-radio-group>
+                </ion-list>
+            <br> 
+            
+            
+            <ion-list>
+              <ion-radio-group formControlName="q3">
+                <ion-item>
+
+                  <ion-card-subtitle>Q.Archive and maintain Assessment record for future reference </ion-card-subtitle>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes"></ion-radio>
+                </ion-item>
+         
+                 <ion-item>
+                    <ion-label>No</ion-label>
+                    <ion-radio value="No"></ion-radio>
+                    <ion-input  type="text"   formControlName="q3reason" placeholder="click here to type your reasons">
+                        
+                    </ion-input> 
+                </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+          <br>   
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+  
+  <ion-modal [isOpen]="isModalOpen6">
+    <form method="post" [formGroup]="form6" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen6(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)=" createpeople6()">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+
+        
+        <ion-card>
+          <!-- <ion-card-title>Activites</ion-card-title> -->
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.2.2: Procedure for Accessing records
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+          <!-- <ion-card-subtitle>1. Preparing Training Plan </ion-card-subtitle> -->
+          <br>
+   
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Access to information is based on procedure for accessing different kinds of records maintained in the Institute. </ion-card-subtitle>
+                </ion-item>
+
+              <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No"></ion-radio>
+                   <ion-input  type="text"   formControlName="q1reason" placeholder="click here to type your reasons">
+                        
+                  </ion-input> 
+               </ion-item>
+
+               </ion-radio-group>
+              </ion-list>
+              <br>
+
+            
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-content>
+    </ng-template>
+    </form>
+  </ion-modal>
+
+
+
+
+</ion-content>

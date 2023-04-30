@@ -1,0 +1,247 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    
+    <ion-title>DRAFT 1</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-button routerLink="/process1" class="butt1" expand="block"><span> process1</span></ion-button>
+
+  <ion-button expand="block" (click)="setOpen(true)" (click)="text()" class="butt1"><span>QAP 10.1.1: Procedure for maintaining Inventory system</span></ion-button>
+
+
+
+ 
+  <ion-modal [isOpen]="isModalOpen">
+
+    <form method="post" [formGroup]="form" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="start">
+            <ion-button (click)="setOpen(false)">cancel</ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button (click)="createpeople()" >Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+
+        <form method="post" [formGroup]="form" >
+        <ion-card>
+    
+         
+    
+          <ion-card-header collapse="condense">
+            <h2>
+              QAP 10.1.1: Procedure for maintaining Inventory system
+            </h2>
+          </ion-card-header>
+          <ion-card-content>
+    
+          <br>
+    
+            <ion-list>
+              <ion-radio-group formControlName="q1">
+                <ion-item>
+                  
+                  <ion-card-subtitle>Q.Maintain inventory for fixed assets of the Institute as per Procurement Management Manual</ion-card-subtitle>
+                </ion-item>
+    
+               <ion-item>
+                 <ion-label>Yes</ion-label>
+                 <ion-radio value="Yes"  name="q1"></ion-radio>
+               </ion-item>
+        
+                <ion-item>
+                   <ion-label>No</ion-label>
+                   <ion-radio value="No" name="q1"  ></ion-radio>
+ 
+                  <ion-input type="text" value=" {{inputvalue.value}}"  formControlName="q1reason" placeholder="click here to type your reasons">
+                   
+                  </ion-input>
+      
+                </ion-item>
+    
+               
+              
+    
+              
+    
+               </ion-radio-group>
+              </ion-list>
+              <br>
+    
+              <ion-list>
+                <ion-radio-group formControlName="q2">
+                  <ion-item>
+    
+                    <ion-card-subtitle>Q.Maintain inventory of facilities and amenities as per Procurement Management Manual </ion-card-subtitle>
+                  </ion-item>
+                  
+                  <ion-item>
+                    <ion-label>Yes</ion-label>
+                    <ion-radio value="Yes"  name="q2" ></ion-radio>
+                  </ion-item>
+           
+                   <ion-item>
+                      <ion-label>No</ion-label>
+                      <ion-radio value="No" name="q2" id="click-trigger1" ></ion-radio>
+
+                                          
+                      <ion-input  type="text" value="{{inputvalue1.value}}"  formControlName="q2reason" placeholder="click here to type your reasons">
+                        
+                      </ion-input>                                        
+                      
+                  </ion-item>
+    
+              
+    
+                 </ion-radio-group>
+                </ion-list>
+    
+<!--     
+            <ion-button (click)="createpeople()" >Confirm</ion-button> -->
+        
+          </ion-card-content>
+        
+        </ion-card>
+      </form>
+      </ion-content>
+    
+    
+    </ng-template>
+  </form>
+  </ion-modal>
+
+
+ 
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+
+
+
+  <ion-content class="ion-padding">
+
+    <form method="post" [formGroup]="form" >
+    <ion-card>
+
+     
+
+      <ion-card-header collapse="condense">
+        <h2>
+          QAP 10.1.1: Procedure for maintaining Inventory system
+        </h2>
+      </ion-card-header>
+      <ion-card-content>
+
+      <br>
+
+        <ion-list>
+          <ion-radio-group formControlName="q1">
+            <ion-item>
+              
+              <ion-card-subtitle>Q.Maintain inventory for fixed assets of the Institute as per Procurement Management Manual</ion-card-subtitle>
+            </ion-item>
+
+           <ion-item>
+             <ion-label>Yes</ion-label>
+             <ion-radio value="Yes"  name="q1"></ion-radio>
+           </ion-item>
+    
+            <ion-item>
+               <ion-label>No</ion-label>
+               <ion-radio value="No" name="q1" id="click-trigger" ></ion-radio>
+
+
+               <ion-popover trigger="click-trigger" triggerAction="click">
+                <ng-template>
+
+                  <ion-input type="text" placeholder="why NO"  [formControl]="inputvalue"  ></ion-input>
+                </ng-template>
+              </ion-popover>
+             
+                
+              <ion-input type="text" value=" {{inputvalue.value}}"  formControlName="q1reason">
+               
+              </ion-input>
+  
+            </ion-item>
+
+           
+          
+
+          
+
+           </ion-radio-group>
+          </ion-list>
+          <br>
+
+          <ion-list>
+            <ion-radio-group formControlName="q2">
+              <ion-item>
+
+                <ion-card-subtitle>Q.Maintain inventory of facilities and amenities as per Procurement Management Manual </ion-card-subtitle>
+              </ion-item>
+              
+              <ion-item>
+                <ion-label>Yes</ion-label>
+                <ion-radio value="Yes"  name="q2" ></ion-radio>
+              </ion-item>
+       
+               <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No" name="q2" id="click-trigger1" ></ion-radio>
+
+                  <ion-popover trigger="click-trigger1" triggerAction="click">
+                    <ng-template>
+   
+                      <ion-input type="text" placeholder="why NO"  [formControl]="inputvalue1"  ></ion-input>
+                    </ng-template>
+                  </ion-popover>
+                                      
+                  <ion-input  type="text" value="{{inputvalue1.value}}"  formControlName="q2reason" >
+                    
+                  </ion-input>                                        
+                  
+              </ion-item>
+
+          
+
+             </ion-radio-group>
+            </ion-list>
+
+
+        <ion-button (click)="createpeople()" >Confirm</ion-button>
+    
+      </ion-card-content>
+    
+    </ion-card>
+  </form>
+  </ion-content>
+
+
+
+
+  
+
+ 
+
+</ion-content>
+
+               
